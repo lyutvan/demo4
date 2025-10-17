@@ -1,0 +1,93 @@
+
+:root{
+  --c-dark: #0B1F3A;
+  --c-gold: #C9A227;
+  --c-white: #FFFFFF;
+  --maxw: 1180px;
+}
+*{box-sizing:border-box}
+html:focus-within {scroll-behavior: smooth;}
+body{margin:0;font-family:Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif;color:#0f172a;background:#fff;line-height:1.6}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--c-gold);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Montserrat, Arial, sans-serif;margin:0 0 12px 0}
+h1{font-size:36px;line-height:1.2}
+h2{font-size:28px}
+h3{font-size:20px}
+.btn{display:inline-block;padding:12px 18px;border-radius:8px;border:1px solid transparent;font-weight:600}
+.btn-gold{background:var(--c-gold);color:#111}
+.btn-outline{border-color:var(--c-gold);color:var(--c-gold)}
+.section{padding:56px 0}
+.grid{display:grid;gap:20px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{border:1px solid #e5e7eb;border-radius:12px;padding:18px;background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.badge{display:inline-block;background:#f1f5f9;color:#0b1f3a;padding:4px 8px;border-radius:999px;font-size:12px;margin-right:6px}
+
+/* Header */
+.site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:1000}
+.header-inner{display:flex;align-items:center;gap:16px;min-height:64px}
+.logo img{height:40px}
+.nav{margin-left:auto}
+.nav-list{display:flex;gap:16px;list-style:none;padding:0;margin:0}
+.nav-link{color:#111;padding:10px;border-radius:8px}
+.nav-link.active,.nav-link:hover{background:#f8fafc}
+.header-contacts{display:flex;align-items:center;gap:10px;margin-left:8px}
+.header-phone{color:var(--c-white);background:var(--c-dark);padding:8px 12px;border-radius:8px}
+.burger{display:none;background:none;border:none;width:40px;height:40px;position:relative}
+.burger span,.burger span:before,.burger span:after{content:"";position:absolute;left:8px;right:8px;height:2px;background:#111;transition:.2s}
+.burger span{top:19px}
+.burger span:before{top:-8px}
+.burger span:after{top:8px}
+
+/* Hero */
+.hero{background:linear-gradient(180deg, rgba(11,31,58,.9), rgba(11,31,58,.7)), url('../images/hero.webp') center/cover no-repeat; color:#fff; padding:80px 0}
+.hero .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.hero h1{font-size:40px}
+.hero p{opacity:.95;max-width:800px}
+
+/* Features */
+.features{background:#f8fafc}
+.feature-item{display:flex;gap:12px;align-items:flex-start}
+.feature-icon{color:var(--c-gold)}
+
+/* Forms */
+.form{display:grid;gap:12px}
+.form-row{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+input,select,textarea{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:8px}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--c-gold);border-color:var(--c-gold)}
+.consent{font-size:12px;color:#334155}
+small.muted{color:#64748b}
+
+/* Footer */
+.site-footer{background:var(--c-dark);color:#fff;padding:40px 0;margin-top:40px}
+.footer-grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.footer-logo{filter:brightness(2)}
+.footer-menu{list-style:none;padding:0;margin:0}
+.footer-menu li a{color:#e2e8f0}
+
+/* Cards, lists */
+.list-check li{margin:6px 0}
+.list-check li::marker{content:"✓ "}
+
+/* Call FAB for mobile */
+.call-fab{position:fixed;right:16px;bottom:16px;z-index:999}
+
+/* FAQ accordion */
+.accordion .item{border-bottom:1px solid #e5e7eb;padding:12px 0}
+.accordion button{background:none;border:none;width:100%;text-align:left;font-weight:600;padding:0;font-size:16px}
+.accordion .panel{display:none;padding-top:8px;color:#334155}
+
+/* Cookie banner */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;background:#0b1f3a;color:#fff;padding:12px;display:flex;justify-content:center;gap:12px;align-items:center;z-index:1000}
+.cookie-banner button{background:var(--c-gold);border:none;padding:8px 12px;border-radius:6px;font-weight:600}
+
+/* Responsive */
+@media (max-width:900px){
+  .hide-sm{display:none}
+  .burger{display:block}
+  .nav{position:absolute;left:0;right:0;top:64px;background:#fff;display:none;border-bottom:1px solid #e5e7eb}
+  .nav.open{display:block}
+  .nav-list{flex-direction:column;padding:12px}
+}
